@@ -1,0 +1,13 @@
+#colorCircle {
+	color: chartreuse;
+	background-color: cornflowerblue;
+	height: 150px;
+	width: 150px;
+	font-family: sans-serif;
+	border-radius: 50%;
+}
+h2 {
+	text-align: center;
+	padding: 25px;
+}
+
