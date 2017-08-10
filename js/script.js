@@ -1,18 +1,23 @@
-function welcome(){
-	function firstName(f) {
-		if (f.value == "")
-			alert("Please type your first name")
-		else var firstName = $("firstName")
-			}
-	function lastName(l) {
-		if (l.value == "")
-			alert("please type your last name")
-		else var lastName = $("lastName")
-	}
-	function submitButton() {
-		document.getElementById().value
-	}
+// function welcome(){
+// 	function firstName(f) {
+// 		if (f.value == "")
+// 			alert("Please type your first name")
+// 		else var firstName = $("firstName")
+// 			}
+// 	function lastName(l) {
+// 		if (l.value == "")
+// 			alert("please type your last name")
+// 		else var lastName = $("lastName")
+// 	}
+// 	function submitButton() {
+// 		document.getElementById().value
+// 	}
+// }
+
+function alert() {
+	document.getElementById("clickMe").innerHTML = "Hello Gorgeous"
 }
+
 
 // this is code to change the circle color
 function changeColor() {
@@ -26,7 +31,9 @@ function changeBack() {
 }
 
 //Playing with fonts
-
+function changeFonts() {
+	document.getElementById("randomText").style.fontFamily = "Impact,Charcoal,Pacifico";
+}
 
 
 
@@ -48,3 +55,16 @@ $(document).ready(function() {
 });
 
 //this is code to run the AJAX Vegan button call
+$(document).ready(function() {
+	$("#veganButton").click(function() {
+			$.ajax({
+				method: "GET" ,
+				url: "https:/http://veggieipsum.com/api/"
+			}).done(function(reply) {
+					$("#veganOutput").html(reply);
+					console.log("Veggie Goodness");
+				}
+			)
+		}
+	)
+});
