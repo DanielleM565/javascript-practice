@@ -1,18 +1,18 @@
-// function welcome(){
-// 	function firstName(f) {
-// 		if (f.value == "")
-// 			alert("Please type your first name")
-// 		else var firstName = $("firstName")
-// 			}
-// 	function lastName(l) {
-// 		if (l.value == "")
-// 			alert("please type your last name")
-// 		else var lastName = $("lastName")
-// 	}
-// 	function submitButton() {
-// 		document.getElementById().value
-// 	}
-// }
+function welcome(){
+	function firstName(f) {
+		if (f.value == "")
+			alert("Please type your first name")
+		else var firstName = $("firstName")
+			}
+	function lastName(l) {
+		if (l.value == "")
+			alert("please type your last name")
+		else var lastName = $("lastName")
+	}
+	function submitButton() {
+		document.getElementById().value
+	}
+}
 
 // this is code to change the circle color
 function changeColor() {
@@ -25,22 +25,26 @@ function changeBack() {
 	document.getElementById("colorCircle").style.color = "chartreuse";
 }
 
+//Playing with fonts
+
+
+
+
+
+
 //this is code to run the AJAX bacon button call
 $(document).ready(function() {
-
-	});
-
-
-$(document).ready(function() {
-	$("#colorButton").click(function() {
+	$("#baconButton").click(function() {
 		$.ajax({
-			method: "GET",
-			url: " http://thecolorapi.com/id?hex=0047AB&rgb=0,71,171&hsl=215,100%,34%&cmyk=100,58,0,33&format=html"
+			method: "GET" ,
+			url: "https://baconipsum.com/api/?type=all-meat&sentences=1&start-with-lorem=1"
 		}).done(function(reply) {
-			$("#colorButton").html(reply);
-			console.log("Here's more color");
-		});
-	});
+			$("#baconOutput").html(reply);
+			console.log("Crispy Goodness");
+			}
+		)
+		}
+	)
 });
 
-//http://www.thecolorapi.com/
+//this is code to run the AJAX Vegan button call
