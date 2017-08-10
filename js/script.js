@@ -54,6 +54,7 @@ $(document).ready(function() {
 	)
 });
 
+
 //this is code to run the AJAX Vegan button call
 $(document).ready(function() {
 	$("#veganButton").click(function() {
